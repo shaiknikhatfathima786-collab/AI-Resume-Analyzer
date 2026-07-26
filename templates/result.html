@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🤖 AI Resume Analyzer</h1>
+
+    <h2>Resume Analysis Report</h2>
+
+    <!-- ATS Score -->
+    <div class="progress">
+       <div class="progress-bar" style="width: {{ ats_score | default(0) }}%;"></div>
+    </div>
+
+    <h2>ATS Score : {{ ats_score }}%</h2>
+
+    <hr>
+
+    <!-- Candidate Details -->
+    <h2>Candidate Details</h2>
+
+    <table>
+        <tr>
+            <td><strong>Name</strong></td>
+            <td>{{ name }}</td>
+        </tr>
+
+        <tr>
+            <td><strong>Email</strong></td>
+            <td>{{ email }}</td>
+        </tr>
+
+        <tr>
+            <td><strong>Phone</strong></td>
+            <td>{{ phone }}</td>
+        </tr>
+
+        <tr>
+            <td><strong>GitHub</strong></td>
+            <td>{{ github }}</td>
+        </tr>
+
+        <tr>
+            <td><strong>LinkedIn</strong></td>
+            <td>{{ linkedin }}</td>
+        </tr>
+
+        <tr>
+            <td><strong>Total Pages</strong></td>
+            <td>{{ pages }}</td>
+        </tr>
+
+        <tr>
+            <td><strong>Total Words</strong></td>
+            <td>{{ words }}</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Matched Skills -->
+    <h2>✅ Matched Skills</h2>
+
+    <div class="skill-box">
+
+        {% if matched_skills %}
+
+            {% for skill in matched_skills %}
+                <span class="matched">{{ skill }}</span>
+            {% endfor %}
+
+        {% else %}
+
+            <p>No matched skills found.</p>
+
+        {% endif %}
+
+    </div>
+
+    <hr>
+
+    <!-- Missing Skills -->
+    <h2>❌ Missing Skills</h2>
+
+    <div class="skill-box">
+
+        {% if missing_skills %}
+
+            {% for skill in missing_skills %}
+                <span class="missing">{{ skill }}</span>
+            {% endfor %}
+
+        {% else %}
+
+            <p>No missing skills 🎉</p>
+
+        {% endif %}
+
+    </div>
+
+    <hr>
+
+    <!-- Suggestions -->
+    <h2>Suggestions</h2>
+
+    <ul>
+
+        {% for suggestion in suggestions %}
+            <li>{{ suggestion }}</li>
+        {% endfor %}
+
+    </ul>
+
+    <br>
+
+    <a href="/" class="btn">Analyze Another Resume</a>
+
+</div>
+
+</body>
+</html>

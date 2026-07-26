@@ -1,0 +1,147 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eef3f9;
+}
+
+.container{
+    width:700px;
+    margin:40px auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,0,0,0.15);
+    text-align:center;
+}
+
+h1{
+    color:#1565ff;
+    margin-bottom:20px;
+}
+
+h2{
+    color:#111;
+    margin-top:30px;
+}
+
+.score{
+    font-size:45px;
+    font-weight:bold;
+    color:#1565ff;
+}
+
+.progress{
+    width:100%;
+    height:22px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin:20px 0;
+}
+
+.progress-bar{
+    height:100%;
+    background:#1565ff;
+}
+
+.skills{
+    list-style:none;
+    padding:0;
+    margin:20px auto;
+    width:300px;
+    text-align:left;
+}
+
+.skills li{
+    padding:8px;
+    font-size:22px;
+}
+
+.match{
+    color:green;
+}
+
+.miss{
+    color:red;
+}
+
+.suggestions{
+    text-align:left;
+    width:420px;
+    margin:20px auto;
+}
+
+.suggestions li{
+    font-size:20px;
+    margin:10px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    background:#1565ff;
+    color:white;
+    padding:14px 30px;
+    text-decoration:none;
+    border-radius:8px;
+    font-size:20px;
+}
+
+.btn:hover{
+    background:#0046d5;
+}
+.progress{
+width:100%;
+height:18px;
+background:#ddd;
+border-radius:20px;
+margin:20px 0;
+overflow:hidden;
+}
+
+.progress-bar{
+height:100%;
+background:#1f6fff;
+border-radius:20px;
+}
+
+.skill-box{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:25px;
+justify-content:center;
+}
+
+.skill{
+padding:8px 16px;
+border-radius:20px;
+font-size:16px;
+font-weight:bold;
+}
+
+.matched{
+background:#d4edda;
+color:#155724;
+}
+
+.missing{
+background:#f8d7da;
+color:#721c24;
+}
+
+.suggestions{
+text-align:left;
+width:80%;
+margin:auto;
+}
+
+.suggestions ul{
+padding-left:20px;
+}
+
+.suggestions li{
+margin:10px 0;
+font-size:17px;
+}

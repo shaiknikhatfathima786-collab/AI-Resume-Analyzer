@@ -1,0 +1,25 @@
+# Virtual Environment
+venv/
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Python packages
+*.egg-info/
+dist/
+build/
+
+# PyMuPDF cache
+*.pyd
